@@ -7,4 +7,5 @@ module.exports = function(location, uid) {
 		location: location,
 		user: uid
 	})
+	console.log("Logged on firebase")
 }
