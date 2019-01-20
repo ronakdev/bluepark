@@ -51,7 +51,7 @@ PermitAuthRequestCharacteristic.prototype.onReadRequest = function(offset, callb
     callback(this.RESULT_ATTR_NOT_LONG, null);
   }
   else {
-    callback(this.RESULT_SUCCESS, data);
+    callback(this.RESULT_SUCCESS, null);
   }
 };
 
