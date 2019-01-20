@@ -8,7 +8,7 @@ const util = require('util')
 function PermitAuthRequestCharacteristic(parkingSpot) {
 	this.parkingSpot = parkingSpot
 	bleno.Characteristic.call(this, {
-		uuid: '13333333333333333333333333330001',
+		uuid: '4dfda589-ab7e-4304-bb88-9ea25910c888',
 		properties: [
 			"write", "read"
 		],
