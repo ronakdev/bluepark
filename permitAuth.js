@@ -36,3 +36,5 @@ function PermitAuthRequestCharacteristic(parkingSpot) {
 		}
 	})
 }
+
+module.exports = PermitAuthRequestCharacteristic
