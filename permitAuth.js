@@ -47,12 +47,12 @@ PermitAuthRequestCharacteristic.prototype.onWriteRequest = function(data, offset
 }
 
 PermitAuthRequestCharacteristic.prototype.onReadRequest = function(offset, callback) {
-  if (offset) {
+  //if (offset) {
     callback(this.RESULT_ATTR_NOT_LONG, null);
-  }
-  else {
-    callback(this.RESULT_SUCCESS, null);
-  }
+  // }
+  // else {
+    // callback(this.RESULT_SUCCESS, null);
+  // }
 };
 
 module.exports = PermitAuthRequestCharacteristic
