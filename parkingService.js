@@ -10,4 +10,5 @@ function ParkingService(parkingSpot) {
 	})
 }
 
+util.inherits(ParkingService, bleno.ParkingService)
 module.exports = ParkingService

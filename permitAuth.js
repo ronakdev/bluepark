@@ -1,6 +1,6 @@
 const bleno = require('../blue/bleno/')
 const verifyId = require('./verifyId.js')
-
+const util = require('util')
 // hardware
 // const Gpio = require('onoff').Gpio
 // let LED = new Gpio(4, 'out')
@@ -21,6 +21,7 @@ function PermitAuthRequestCharacteristic(parkingSpot) {
 	})
 }
 
+util.inherits(PermitAuthRequestCharacteristic, bleno.Characteristic)
 PermitAuthRequestCharacteristic.prototype.onWriteRequest = function(data, offset, withoutResponse, callback) {
 	if (offset) {
 		callback(this.RESULT_ATTR_NOT_LONG);
