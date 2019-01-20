@@ -26,7 +26,7 @@ function PermitAuthRequestCharacteristic(parkingSpot) {
 util.inherits(PermitAuthRequestCharacteristic, bleno.Characteristic)
 PermitAuthRequestCharacteristic.prototype.onWriteRequest = function(data, offset, withoutResponse, callback) {
 	console.log("We be written too")
-	console.log(data)
+	console.log(Buffer.readInt8(data))
 	if (offset) {
 		callback(this.RESULT_ATTR_NOT_LONG);
 	} else if (data.length !== 2) {
