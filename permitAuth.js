@@ -2,7 +2,7 @@ const bleno = require('../blue/bleno/')
 const verifyId = require('./verifyId.js')
 const util = require('util')
 
-const confirmSpot = require('./confirmFirebase.js')
+const confirmSpot = require('./confirmSpot.js')
 // hardware
 // const Gpio = require('onoff').Gpio
 // let LED = new Gpio(4, 'out')
