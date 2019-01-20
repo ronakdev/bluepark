@@ -9,3 +9,5 @@ function ParkingService(parkingSpot) {
 		]
 	})
 }
+
+module.exports = ParkingService
