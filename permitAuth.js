@@ -51,7 +51,7 @@ PermitAuthRequestCharacteristic.prototype.onWriteRequest = function(data, offset
 
 PermitAuthRequestCharacteristic.prototype.onReadRequest = function(offset, callback) {
   //if (offset) {
-    callback(this.RESULT_ATTR_NOT_LONG, null);
+    callback(this.RESULT_SUCCESS, this.parkingSpot.location);
   // }
   // else {
     // callback(this.RESULT_SUCCESS, null);
