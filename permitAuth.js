@@ -1,6 +1,8 @@
 const bleno = require('../blue/bleno/')
 const verifyId = require('./verifyId.js')
 const util = require('util')
+
+const confirmSpot = require('./confirmFirebase.js')
 // hardware
 // const Gpio = require('onoff').Gpio
 // let LED = new Gpio(4, 'out')
@@ -44,6 +46,7 @@ PermitAuthRequestCharacteristic.prototype.onWriteRequest = function(data, offset
 				// LED.writeSync(0)
 			} else {
 				// LED.writeSync(1)
+				// callback(this.INVALID_RESULT, null)
 			}
 		}
 	}
