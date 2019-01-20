@@ -26,12 +26,12 @@ function PermitAuthRequestCharacteristic(parkingSpot) {
 util.inherits(PermitAuthRequestCharacteristic, bleno.Characteristic)
 PermitAuthRequestCharacteristic.prototype.onWriteRequest = function(data, offset, withoutResponse, callback) {
 	console.log("We be written too")
-	console.log(Buffer.readInt8(data))
-	if (offset) {
-		callback(this.RESULT_ATTR_NOT_LONG);
-	} else if (data.length !== 2) {
-		callback(this.RESULT_INVALID_ATTRIBUTE_LENGTH);
-	} else {
+	console.log(data[0])
+	// if (offset) {
+	// 	callback(this.RESULT_ATTR_NOT_LONG);
+	// } else if (data.length !== 2) {
+	// 	callback(this.RESULT_INVALID_ATTRIBUTE_LENGTH);
+	// } else {
 		if (offset) {
 			callback(this.RESULT_ATTR_NOT_LONG);
 		}
@@ -47,10 +47,11 @@ PermitAuthRequestCharacteristic.prototype.onWriteRequest = function(data, offset
 				// LED.writeSync(0)
 			} else {
 				// LED.writeSync(1)
+				callback(this.RESULT_UNLIKELY_ERROR, null)
 				// callback(this.INVALID_RESULT, null)
 			}
 		}
-	}
+	// }
 }
 
 PermitAuthRequestCharacteristic.prototype.onReadRequest = function(offset, callback) {
