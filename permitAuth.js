@@ -7,11 +7,14 @@ const verifyId = require('./verifyId.js')
 
 function PermitAuthRequestCharacteristic(parkingSpot) {
 	bleno.Characteristic.call(this, {
-		uuid: 'fff1',
+		uuid: '13333333333333333333333333330001',
 		properties: [
 			"write"
-		],
-		onWriteRequest: function(data, offset, withoutResponse, callback) {
+		]
+	})
+}
+
+PermitAuthRequestCharacteristic.prototype.onWriteRequest = function(data, offset, withoutResponse, callback) {
 			if (offset) {
 				callback(this.RESULT_ATTR_NOT_LONG);
 			} else if (data.length !== 2) {
@@ -34,7 +37,4 @@ function PermitAuthRequestCharacteristic(parkingSpot) {
 				}
 			}
 		}
-	})
-}
-
 module.exports = PermitAuthRequestCharacteristic
