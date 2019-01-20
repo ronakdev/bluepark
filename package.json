@@ -1,0 +1,22 @@
+{
+  "name": "bluepark",
+  "version": "1.0.0",
+  "description": "Bluetooth Based Parking Authentication",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronakdev/bluepark.git"
+  },
+  "author": "ronakdev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ronakdev/bluepark/issues"
+  },
+  "homepage": "https://github.com/ronakdev/bluepark#readme",
+  "dependencies": {
+    "bleno": "^0.5.0"
+  }
+}
