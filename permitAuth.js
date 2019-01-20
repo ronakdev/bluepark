@@ -10,7 +10,7 @@ function PermitAuthRequestCharacteristic(parkingSpot) {
 	bleno.Characteristic.call(this, {
 		uuid: '13333333333333333333333333330001',
 		properties: [
-			"write"
+			"write", "read"
 		]
 	})
 }
@@ -38,4 +38,14 @@ PermitAuthRequestCharacteristic.prototype.onWriteRequest = function(data, offset
 		}
 	}
 }
+
+PermitAuthRequestCharacteristic.prototype.onReadRequest = function(offset, callback) {
+  if (offset) {
+    callback(this.RESULT_ATTR_NOT_LONG, null);
+  }
+  else {
+    callback(this.RESULT_SUCCESS, data);
+  }
+};
+
 module.exports = PermitAuthRequestCharacteristic
