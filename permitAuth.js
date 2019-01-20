@@ -40,6 +40,7 @@ PermitAuthRequestCharacteristic.prototype.onWriteRequest = function(data, offset
 			let id = data.readUInt8(0);
 			if (verifyId(id)) {
 				confirmSpot(this.parkingSpot.location, id)
+				callback(this.RESULT_SUCCESS, this.parkingSpot.location)
 				// LED.writeSync(0)
 			} else {
 				// LED.writeSync(1)
