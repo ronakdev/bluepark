@@ -1,4 +1,4 @@
-const bleno = require('bleno')
+const bleno = require('../blue/bleno/')
 const ParkingService = require('./parkingService.js')
 
 let parkingSpot = {
