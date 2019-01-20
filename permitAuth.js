@@ -1,5 +1,5 @@
 const bleno = require('../blue/bleno/')
-const verifyId = require('verifyId.js')
+const verifyId = require('./verifyId.js')
 
 // hardware
 // const Gpio = require('onoff').Gpio
