@@ -1,4 +1,5 @@
 const bleno = require('../blue/bleno/')
+const util = require('util')
 var PermitAuthRequestCharacteristic = require('./permitAuth.js')
 
 function ParkingService(parkingSpot) {
