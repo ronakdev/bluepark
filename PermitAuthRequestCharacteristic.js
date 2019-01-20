@@ -3,9 +3,6 @@ const verifyId = require('./verifyId.js')
 const util = require('util')
 
 const confirmSpot = require('./confirmSpot.js')
-// hardware
-// const Gpio = require('onoff').Gpio
-// let LED = new Gpio(4, 'out')
 
 function PermitAuthRequestCharacteristic(parkingSpot) {
 	this.parkingSpot = parkingSpot
@@ -44,9 +41,8 @@ PermitAuthRequestCharacteristic.prototype.onWriteRequest = function(data, offset
 			if (verifyId(id)) {
 				confirmSpot(this.parkingSpot.location, id)
 				callback(this.RESULT_SUCCESS, this.parkingSpot.location)
-				// LED.writeSync(0)
 			} else {
-				// LED.writeSync(1)
+				// LED.writeSync(0)
 				callback(this.RESULT_UNLIKELY_ERROR, null)
 				// callback(this.INVALID_RESULT, null)
 			}

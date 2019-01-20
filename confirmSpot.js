@@ -1,7 +1,4 @@
-const firebase = require('firebase')
-const config = require('./config')
-
-firebase.initializeApp(config)
+const firebase = require('./firebase.js')
 
 
 module.exports = function(location, uid) {
