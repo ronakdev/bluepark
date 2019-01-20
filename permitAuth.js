@@ -11,6 +11,12 @@ function PermitAuthRequestCharacteristic(parkingSpot) {
 		uuid: '13333333333333333333333333330001',
 		properties: [
 			"write", "read"
+		],
+		descriptors: [
+			new bleno.Descriptor({
+				uuid: '2901',
+				value: 'Authenticates your parking'
+			})
 		]
 	})
 }
